@@ -1,25 +1,85 @@
-import React, {useEffect} from 'react'
-import {CREATE_STORY_ROUTE} from '../../utils/constants';
-import { Link, Redirect } from 'react-router-dom';
-import StoryItem from './adapter/StoryItem'
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from "react";
+import { CREATE_STORY_ROUTE } from "../../utils/constants";
+import { Link, Redirect } from "react-router-dom";
+import StoryItem from "./adapter/StoryItem";
+import { connect } from "react-redux";
+import axios from "axios";
 
+const RankingChart = () => {
+  // https://data.similarweb.com/api/v1/data?domain=github.com
 
+  let [siteRanks, setSiteRanks] = useState([]);
+
+  useEffect(async () => {
+    let sites = [
+      "google.com",
+      "facebook.com",
+      "youtube.com",
+      "twitter.com",
+      "instagram.com",
+    ];
+    let sitePromises = sites.map(async (site) => {
+      let tmpsitepromise = await axios.get(
+        `https://floating-sierra-52833.herokuapp.com/https://data.similarweb.com/api/v1/data?domain=${site}`
+      );
+      return tmpsitepromise;
+    });
+    let siteInfos = await Promise.all(sitePromises);
+    siteInfos = siteInfos.map((s) => s.data);
+    setSiteRanks(siteInfos);
+  }, []);
+
+  return (
+    <div className="bg-white rounded p-4 mt-4">
+      <p className="font-sen text-black text-xl md:text-2xl font-bold">
+        Rankings
+      </p>
+      <table className="table-auto w-full">
+        <thead>
+          <tr>
+            <th>Site</th>
+            <th>Rank</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {siteRanks[0] &&
+            siteRanks.maps((rank) => (
+              <tr>
+                <td>{rank.siteName}</td>
+                <td>{rank.globalRank.Rank}</td>
+                <td>{rank.Category}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 const Stories = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="md:px-16 px-2 bg-gray-200 min-h-screen pb-6">
       <div className="md:flex-row -mx-2 flex flex-col">
         <div className="md:w-1/4 px-2 w-full">
           <div className="sticky top-story">
             <div className="bg-white rounded p-4 mt-4">
-              <p className="font-sen text-black text-xl md:text-2xl font-bold">Popular Web Domains</p> 
-              <p className="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante massa, porttitor bibendum odio et, aliquam eleifend enim.</p>
-              <Link to={`${CREATE_STORY_ROUTE}/0`}to={CREATE_STORY_ROUTE} className="app-color hover:text-white rounded text-white py-2 px-4 focus:outline-none hover:shadow-md shadow transition duration-500 ease-in-out">
+              <p className="font-sen text-black text-xl md:text-2xl font-bold">
+                Popular Web Domains
+              </p>
+              <p className="text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ante massa, porttitor bibendum odio et, aliquam eleifend enim.
+              </p>
+              <Link
+                to={`${CREATE_STORY_ROUTE}/0`}
+                to={CREATE_STORY_ROUTE}
+                className="app-color hover:text-white rounded text-white py-2 px-4 focus:outline-none hover:shadow-md shadow transition duration-500 ease-in-out"
+              >
                 Check out!
               </Link>
             </div>
@@ -49,26 +109,22 @@ const Stories = () => {
           {/* Story List Section */}
           {/* <div className="mx-auto loader mt-56"></div> */}
           {/* {storyList} */}
-          <StoryItem/>
-          
-
+          {/* <StoryItem/> */}
+          <RankingChart />
         </div>
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 Stories.propTypes = {
   // getAllStories: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
-const allActions = {
-  
-}
+const allActions = {};
 
 export default connect(mapStateToProps, allActions)(Stories);
