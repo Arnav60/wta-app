@@ -47,7 +47,7 @@ export const Login = ({login, isAuthenticated, setAlert}) => {
           <img src={appLogo} 
           className="h-16 w-16 mt-1"
           alt="appLogo"/>
-          <p className="ml-2 tracking-wide text-3xl font-extrabold my-auto">Hi-Story</p> 
+          <p className="ml-2 tracking-wide text-3xl font-extrabold my-auto">W-T-A</p> 
         </div>
         <p className="mt-1 font-sen text-gray-700 text-xl w-full font-semibold">Log in via email</p>
         <p className="mt-1 text-gray-500 text italic">(Securely login through email and password)</p>
@@ -102,8 +102,8 @@ export const Login = ({login, isAuthenticated, setAlert}) => {
         <img 
         className="mx-auto w-2/3 object-fit h-96"
         src={mainLoginImg} alt="main-login-image"/>
-        <p className="font-sen text-black text-xl md:text-2xl font-medium mt-8">Personalize your Hi-Story experience, log in to your account.</p>
-        <p className="text-gray-700">Hi-Story is the easiest way to connect with the best developers from around the world and grow your career!</p>
+        <p className="font-sen text-black text-xl md:text-2xl font-medium mt-8">Personalize your experience, log in to your account.</p>
+        <p className="text-gray-700">WTA is the easiest way to connect with the best analysts from around the world and grow your career!</p>
         
       </div>
 

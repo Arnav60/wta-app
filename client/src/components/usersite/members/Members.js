@@ -16,8 +16,9 @@ export const Members = () => {
         <div className="md:w-1/4 px-2 w-full mt-6 md:mt-0">
           <div className="sticky top-story">
             <div className="bg-white rounded p-4 mt-4">
-              <p className="font-sen text-black text-xl md:text-2xl font-bold">Community Members</p> 
-              <p className="text-gray-700">Browser Hi-Story community members and follow them to see their posts on your feed.</p>
+              <p className="font-sen text-black text-xl md:text-2xl font-bold">Resources</p> 
+              <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante massa, porttitor bibendum odio et, aliquam eleifend enim. Proin vel lacus a lacus semper pretium et vel ipsum.
+              </p>
               <img 
               className="md:w-4/5 mx-auto my-4 w-2/4"
               src={membersBanner} 
@@ -37,7 +38,7 @@ export const Members = () => {
             <button 
             onClick={() => setType(TEACHER)}
             className={`px-4 h-10 ${type === TEACHER ? 'font-extrabold app-font-color border-b-2 app-border-bottom' : ''}`}>
-              <span className="font-semibold">TEACHERS</span>
+              <span className="font-semibold">CREATORS</span>
             </button>
             {/* <button
             className="px-4 h-10">

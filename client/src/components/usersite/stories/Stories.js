@@ -17,10 +17,10 @@ const Stories = () => {
         <div className="md:w-1/4 px-2 w-full">
           <div className="sticky top-story">
             <div className="bg-white rounded p-4 mt-4">
-              <p className="font-sen text-black text-xl md:text-2xl font-bold">Popular Stories</p> 
-              <p className="text-gray-700 mb-4">Learnt something new recently? Write about it on Hi-Story and showcase your knowledge.</p>
+              <p className="font-sen text-black text-xl md:text-2xl font-bold">Popular Web Domains</p> 
+              <p className="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante massa, porttitor bibendum odio et, aliquam eleifend enim.</p>
               <Link to={`${CREATE_STORY_ROUTE}/0`}to={CREATE_STORY_ROUTE} className="app-color hover:text-white rounded text-white py-2 px-4 focus:outline-none hover:shadow-md shadow transition duration-500 ease-in-out">
-                New Story
+                Check out!
               </Link>
             </div>
           </div>

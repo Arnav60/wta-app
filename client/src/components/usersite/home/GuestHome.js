@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import mainHomeImg from '../../../app_images/main-home-img.jpeg'
+import mainHomeImg from '../../../app_images/main-home-img.png'
 import imageOne from '../../../app_images/main-home-i1.png'
 import imageTwo from '../../../app_images/main-home-i2.png'
 import imageThree from '../../../app_images/main-home-i3.png'
@@ -62,20 +62,20 @@ const GuestHome = ({isAuthenticated, getAllStories, popularStoryList}) => {
       <div className="flex flex-col-reverse md:flex-col">
         <div className="text-center mt-10 px-4">
           <p className="text-gray-600 font-sen text-xs md:text-sm">
-            TEACHING AND LEARNING COMMUNITY
+            ANALYTICS COMMUNITY
           </p>
           <p className="mt-2 font-sen text-black text-4xl md:text-5xl">
-            Welcome to Hi-Story
+            Welcome to WTA
           </p>
-          <p className="text-base md:text-lg">A place of positive teacher taught relations,
+          <p className="text-base md:text-lg">A place of positive learning through insights by analytics,
             <br/>
-            the best place to learn history.</p>
+            find out user behavior!</p>
           <div className="mt-4">
             {/* <Link to={REGISTER_ROUTE} className="app-color hover:text-white rounded text-white py-2 px-4  focus:outline-none hover:shadow-xl shadow transition duration-500 ease-in-out">
               Create an account
             </Link> */}
             <Link to={LOGIN_ROUTE} className="app-color hover:text-white rounded text-white py-2 px-4  focus:outline-none hover:shadow-xl shadow transition duration-500 ease-in-out">
-              Login as student
+              Login
             </Link>
           </div>
           {/* <div className="mt-4">
@@ -94,15 +94,15 @@ const GuestHome = ({isAuthenticated, getAllStories, popularStoryList}) => {
 
         <div className="md:mt-0 mt-2">
           <p className="text-gray-600 font-sen text-sm md:text-lg font-medium tracking-wide">LEARN. SHARE. CONNECT.</p>
-          <p className="font-sen text-black text-2xl md:text-3xl">Helping students to solve real life problems as counselor and as a history and political science teacher</p>
+          <p className="font-sen text-black text-2xl md:text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className="md:flex md:flex-wrap md:justify-between mt-4">
             <div className="md:w-1/3 w-full mb-6">
               <img 
                 className="h-56 mx-auto mb-4"
                 src={imageOne} 
                 alt=""/>
-                <p className="font-sen text-black text-xl md:text-2xl font-medium">Publish stories</p>
-                <p className="text-gray-700">Ask a question on Hi-Story and get help from the community members. We do not ban users for asking subjective and opinionated questions. Go anonymous, if you are too shy.</p>
+                <p className="font-sen text-black text-xl md:text-2xl font-medium">Publish reports</p>
+                <p className="text-gray-700">Ask a question on WTA and get help from the community members. We do not ban users for asking subjective and opinionated questions. Go anonymous, if you are too shy.</p>
             </div>
             <div className="md:w-1/3 w-full mb-6">
               <img 
@@ -110,23 +110,23 @@ const GuestHome = ({isAuthenticated, getAllStories, popularStoryList}) => {
                 src={imageTwo} 
                 alt=""/>
                 <p className="font-sen text-black text-xl md:text-2xl font-medium">Ask a question</p>
-                <p className="text-gray-700">Ask a question on Hi-Story reallife psychological, pratical problems concepts related with History and Political science.</p>
+                <p className="text-gray-700">Ask a question on WTA problems concepts related with user behavior and web analysis tools in general.</p>
             </div>
             <div className="md:w-1/3 w-full mb-6">
               <img 
                 className="h-56 mx-auto mb-4"
                 src={imageThree} 
                 alt=""/>
-                <p className="font-sen text-black text-xl md:text-2xl font-medium">Start your new blog</p>
-                <p className="text-gray-700">Build your own brand and start a blog on your domain for free with Hi-Story. Write stories on your blog and share them with Hi-Story community directly.</p>
+                <p className="font-sen text-black text-xl md:text-2xl font-medium">Start learning</p>
+                <p className="text-gray-700">Interact with the community to enrich your experience.</p>
             </div>
           </div>
         </div>
         
         {/* Trending Section */}
         <div className="mt-2">
-          <p className="text-gray-600 font-sen text-sm md:text-lg font-medium tracking-wide mt-16">STUDENT'S STORIES</p>
-          <p className="font-sen text-black text-3xl md:text-4xl">Trending student learning on Hi-Story</p>
+          <p className="text-gray-600 font-sen text-sm md:text-lg font-medium tracking-wide mt-16">WHAT'S GOING ON</p>
+          <p className="font-sen text-black text-3xl md:text-4xl">Trending on WTA</p>
           <div className="md:flex md:flex-wrap md:justify-start mt-8">
             {popularStoryListJSX}
           </div>

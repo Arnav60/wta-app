@@ -11,8 +11,8 @@ export const About = () => {
       <div className="md:w-5/12">
         <div className="flex h-full">
           <div className="self-center p-8 md:p-0">
-            <p className="mt-1 font-sen text-gray-700 text-lg font-semibold">ABOUT HI-STORY</p>
-            <p className="text-4xl font-bold font-sen text-black">The most loved student's community on the internet!</p> 
+            <p className="mt-1 font-sen text-gray-700 text-lg font-semibold">ABOUT WTA</p>
+            <p className="text-4xl font-bold font-sen text-black">The most loved analytics community on the internet!</p> 
             <p className="text-lg text-gray-600 mt-2">We're on a mission to empower students to tell their stories and help them grow in their career.</p>
           </div>
         </div>
@@ -35,7 +35,7 @@ export const About = () => {
           <div className="self-center p-8 md:p-0">
             
             <p className="text-4xl font-bold font-sen text-black">A truly global community of students!</p> 
-            <p className="text-lg text-gray-600 mt-2">Hi-Story is one of the enriching community where students share, ask and help other students.</p>
+            <p className="text-lg text-gray-600 mt-2">WTA is one of the enriching community where students share, ask and help other students.</p>
           </div>
         </div>
       </div>

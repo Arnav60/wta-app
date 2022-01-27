@@ -78,7 +78,7 @@ import { withRouter } from "react-router-dom";
               <img src={appLogo} 
               className="h-8 w-8 mt-1"
               alt="appLogo"/>
-              <p className="ml-2 tracking-wide app-logo font-extrabold my-auto">Hi-Story</p> 
+              <p className="ml-2 tracking-wide app-logo font-extrabold my-auto">WTA</p> 
             </div>
             <div className="md:ml-4 
             md:bg-gray-100
@@ -116,7 +116,7 @@ import { withRouter } from "react-router-dom";
               className={`px-2 md:px-4 py-2 hover:bg-gray-200 cursor-pointer tracking-wide 
               ${currentRoute == ALL_STORIES_ROUTE ? ' app-font-color border-b-2 app-border-bottom' : ''}`}
               to={ALL_STORIES_ROUTE}>
-                Stories
+                Rankings
               </Link>
               <div
               onClick={() => isDropDownVisible(downVisible => !downVisible)} 
@@ -157,7 +157,7 @@ import { withRouter } from "react-router-dom";
                 <Link 
                 className={`px-2 md:px-4 py-2 hover:bg-gray-200 cursor-pointer tracking-wide 
                 ${currentRoute == ALL_MEMBERS_ROUTE ? 'app-font-color border-b-2 app-border-bottom' : ''}`}
-                to={ALL_MEMBERS_ROUTE}>Members</Link>
+                to={ALL_MEMBERS_ROUTE}>Resources</Link>
                 <Link 
                 className={`px-2 md:px-4 py-2 hover:bg-gray-200 cursor-pointer tracking-wide 
                 ${currentRoute == ABOUT_ROUTE ? 'app-font-color border-b-2 app-border-bottom' : ''}`}
@@ -167,7 +167,7 @@ import { withRouter } from "react-router-dom";
             <Link to={`${CREATE_STORY_ROUTE}/0`}
              className="ml-auto text-gray-700 px-4 my-auto font-bold py-2 hover:bg-gray-200 cursor-pointer app-font-color flex">
               <i className="fa fa-plus-circle self-center text-xl"></i>
-              <span className="ml-2">New Post</span>  
+              <span className="ml-2">Add report</span>  
             </Link>
           </div>
         </div>
